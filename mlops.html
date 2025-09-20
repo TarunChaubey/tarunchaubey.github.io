@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLOps & Deployment - Tarun Kumar Chaubey</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Tarun Kumar Chaubey</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">About Me</a>
+                <a href="machine-learning.html" class="nav-link">Machine Learning</a>
+                <a href="computer-vision.html" class="nav-link">Computer Vision</a>
+                <a href="gen-ai.html" class="nav-link">Gen AI</a>
+                <a href="mlops.html" class="nav-link active">MLOps</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>MLOps & Deployment</h1>
+                <p>Scalable infrastructure, containerization, and production-ready ML systems</p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <div class="project-card featured">
+                    <h2>Microservices Architecture on AWS</h2>
+                    <div class="project-meta">
+                        <span class="tech-stack">AWS EC2 • Docker • Microservices • Cost Optimization</span>
+                    </div>
+                    <p class="project-description">
+                        Self-hosted infrastructure deployment on AWS EC2 enabling microservices architecture with significant cost reduction and improved scalability.
+                    </p>
+                    
+                    <div class="project-details">
+                        <h3>Infrastructure Components</h3>
+                        <ul>
+                            <li><strong>Database Layer:</strong> MongoDB for document storage, PostgreSQL for relational data</li>
+                            <li><strong>Search & Analytics:</strong> OpenSearch for vector operations and full-text search</li>
+                            <li><strong>Caching:</strong> Redis for session management and application caching</li>
+                            <li><strong>API Gateway:</strong> Custom FastAPI-based routing and load balancing</li>
+                        </ul>
+
+                        <h3>Deployment Strategy</h3>
+                        <ul>
+                            <li>Docker containerization for all services with multi-stage builds</li>
+                            <li>Container orchestration with custom deployment scripts</li>
+                            <li>Auto-scaling configurations based on CPU and memory metrics</li>
+                            <li>Health monitoring and automatic service recovery</li>
+                        </ul>
+
+                        <h3>Cost Optimization</h3>
+                        <ul>
+                            <li>60% cost reduction compared to managed cloud services</li>
+                            <li>Resource pooling and efficient container scheduling</li>
+                            <li>Automated resource scaling during off-peak hours</li>
+                            <li>Reserved instance utilization for predictable workloads</li>
+                        </ul>
+
+                        <h3>Monitoring & Observability</h3>
+                        <ul>
+                            <li>Custom monitoring dashboard with real-time metrics</li>
+                            <li>Log aggregation and centralized logging system</li>
+                            <li>Performance monitoring and bottleneck identification</li>
+                            <li>Automated alerting for system anomalies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h2>Model Optimization & Quantization</h2>
+                    <div class="project-meta">
+                        <span class="tech-stack">GGUF • ONNX • Model Optimization • Performance</span>
+                    </div>
+                    <p class="project-description">
+                        Advanced model optimization techniques to improve inference speed and reduce memory usage for production deployment.
+                    </p>
+                    
+                    <div class="project-details">
+                        <h3>Quantization Techniques</h3>
+                        <ul>
+                            <li><strong>GGUF Format:</strong> Optimized quantization for LLM models with minimal quality loss</li>
+                            <li><strong>ONNX Conversion:</strong> Cross-platform model optimization for various deployment targets</li>
+                            <li><strong>Dynamic Quantization:</strong> Runtime optimization for different hardware configurations</li>
+                            <li><strong>Pruning:</strong> Model size reduction through strategic weight elimination</li>
+                        </ul>
+
+                        <h3>Performance Improvements</h3>
+                        <ul>
+                            <li>3-5x faster inference speed with quantized models</li>
+                            <li>70% reduction in memory usage without significant accuracy loss</li>
+                            <li>Improved throughput for batch processing scenarios</li>
+                            <li>Enhanced scalability for concurrent user requests</li>
+                        </ul>
+
+                        <h3>Deployment Optimizations</h3>
+                        <ul>
+                            <li>Edge deployment capabilities for offline inference</li>
+                            <li>Multi-GPU support for large model serving</li>
+                            <li>Adaptive batching for optimal resource utilization</li>
+                            <li>Model versioning and A/B testing infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h2>Kubernetes Production Deployment</h2>
+                    <div class="project-meta">
+                        <span class="tech-stack">Kubernetes • Helm • CI/CD • High Availability</span>
+                    </div>
+                    <p class="project-description">
+                        Enterprise-grade Kubernetes deployment ensuring high availability, scalability, and automated operations for ML applications.
+                    </p>
+                    
+                    <div class="project-details">
+                        <h3>Cluster Architecture</h3>
+                        <ul>
+                            <li>Multi-node Kubernetes cluster with high availability master setup</li>
+                            <li>Namespace isolation for different environments (dev, staging, prod)</li>
+                            <li>RBAC implementation for security and access control</li>
+                            <li>Network policies for micro-segmentation and traffic control</li>
+                        </ul>
+
+                        <h3>Application Deployment</h3>
+                        <ul>
+                            <li>Helm charts for templated and versioned deployments</li>
+                            <li>Rolling updates with zero-downtime deployment strategies</li>
+                            <li>ConfigMaps and Secrets for environment-specific configurations</li>
+                            <li>Horizontal Pod Autoscaling based on custom metrics</li>
+                        </ul>
+
+                        <h3>Monitoring & Operations</h3>
+                        <ul>
+                            <li>Prometheus and Grafana for metrics collection and visualization</li>
+                            <li>Centralized logging with ELK stack integration</li>
+                            <li>Service mesh implementation for traffic management</li>
+                            <li>Automated backup and disaster recovery procedures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h2>Real-time API Development</h2>
+                    <div class="project-meta">
+                        <span class="tech-stack">FastAPI • WebSockets • Socket Layer • Real-time</span>
+                    </div>
+                    <p class="project-description">
+                        High-performance API development with real-time capabilities for interactive ML applications and streaming data processing.
+                    </p>
+                    
+                    <div class="project-details">
+                        <h3>API Architecture</h3>
+                        <ul>
+                            <li><strong>FastAPI Framework:</strong> High-performance async API with automatic documentation</li>
+                            <li><strong>WebSocket Support:</strong> Real-time bidirectional communication for interactive features</li>
+                            <li><strong>Socket Layer:</strong> Custom socket implementation for streaming responses</li>
+                            <li><strong>Rate Limiting:</strong> API throttling and usage monitoring</li>
+                        </ul>
+
+                        <h3>Performance Features</h3>
+                        <ul>
+                            <li>Async/await patterns for non-blocking operations</li>
+                            <li>Connection pooling for database and external service calls</li>
+                            <li>Response caching strategies for improved latency</li>
+                            <li>Load balancing and request distribution</li>
+                        </ul>
+
+                        <h3>Integration Capabilities</h3>
+                        <ul>
+                            <li>Seamless integration with ML model serving frameworks</li>
+                            <li>Support for multiple data formats (JSON, streaming, binary)</li>
+                            <li>Authentication and authorization middleware</li>
+                            <li>Comprehensive API testing and validation frameworks</li>
+                        </ul>
+
+                        <h3>Scalability & Reliability</h3>
+                        <ul>
+                            <li>Horizontal scaling with stateless design principles</li>
+                            <li>Circuit breaker patterns for fault tolerance</li>
+                            <li>Health check endpoints and service discovery</li>
+                            <li>Comprehensive error handling and logging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tarun Kumar Chaubey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
