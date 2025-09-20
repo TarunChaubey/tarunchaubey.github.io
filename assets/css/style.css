@@ -27,7 +27,7 @@
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Calibri', 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background: var(--bg-secondary);
@@ -133,9 +133,9 @@ p {
 .hero {
     background: var(--bg-gradient);
     color: white;
-    padding: 140px 0 100px;
+    padding: 50px 0 10px;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 50px;
     position: relative;
     overflow: hidden;
 }
@@ -152,8 +152,7 @@ p {
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+    position: relative
 }
 
 .hero h1 {
@@ -183,11 +182,11 @@ p {
 }
 
 .social-links a {
-    color: white;
+    color: rgb(216, 198, 198);
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
     transition: var(--transition);
     display: flex;
@@ -206,9 +205,9 @@ p {
 .page-header {
     background: var(--bg-gradient);
     color: white;
-    padding: 140px 0 80px;
+    padding: 50px 0 50px;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 50px;
     position: relative;
     overflow: hidden;
 }
@@ -238,17 +237,21 @@ p {
 
 /* Enhanced Sections */
 section {
-    padding: 100px 0;
+    padding: clamp(20px, 4vw, 10px) 0;
     position: relative;
 }
 
 section h2 {
-    font-size: 2.75rem;
-    margin-bottom: 4rem;
-    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.75rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    text-align: left;
     color: var(--text-primary);
     font-weight: 800;
     position: relative;
+}
+
+section > *:last-child {
+    margin-bottom: 0;
 }
 
 section h2::after {
@@ -548,7 +551,7 @@ footer::before {
     }
     
     section {
-        padding: 60px 0;
+        padding: clamp(10px, 2vw, 10px)
     }
     
     section h2 {
