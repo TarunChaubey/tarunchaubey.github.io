@@ -274,7 +274,7 @@ section h2::after {
     background: var(--bg-card);
     backdrop-filter: blur(10px);
     padding: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
@@ -348,7 +348,7 @@ section h2::after {
 .experience-item li,
 .project-details li {
     margin-bottom: 1rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
     position: relative;
     line-height: 1.7;
     color: var(--text-secondary);
@@ -357,30 +357,21 @@ section h2::after {
 .experience-item li::before {
     content: '●';
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: absolute;
     left: 0.5rem;
     top: 0;
 }
 
-.project-details li::before {
-    content: '▶';
-    color: var(--accent-color);
-    position: absolute;
-    left: 0;
-    font-size: 0.9rem;
-    top: 0.1rem;
-}
-
 /* Enhanced Project Styling */
 .project-meta {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .tech-stack {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1.1rem;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -499,7 +490,7 @@ footer::before {
 @media (max-width: 1024px) {
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        gap: 1rem;
     }
 }
 
@@ -555,7 +546,7 @@ footer::before {
     }
     
     section h2 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         margin-bottom: 3rem;
     }
     
@@ -567,7 +558,7 @@ footer::before {
     .project-card,
     .experience-item,
     .skill-category {
-        padding: 2rem;
+        padding: 1rem;
         margin-bottom: 1.5rem;
     }
     
@@ -578,7 +569,7 @@ footer::before {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
     
     .hero-subtitle {
@@ -586,7 +577,7 @@ footer::before {
     }
     
     .page-header h1 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     
     .project-card,
