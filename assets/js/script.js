@@ -1,31 +1,24 @@
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const href = this.getAttribute('href');
+        if (document.querySelector(href)) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
-// Active navigation highlighting
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
+    const navbar = document.querySelector('.navbar');
+    if (window.pageYOffset > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
 
 const observerOptions = {
@@ -51,27 +44,49 @@ document.querySelectorAll('.project-card, .experience-item, .skill-category').fo
 });
 
 // Mobile navigation toggle
-const createMobileNav = () => {
+const setupMobileNav = () => {
     const nav = document.querySelector('.nav-menu');
     const navContainer = document.querySelector('.nav-container');
+    const navLinks = document.querySelectorAll('.nav-link');
     
     if (window.innerWidth <= 768) {
         if (!document.querySelector('.mobile-toggle')) {
-            const toggle = document.createElement('div');
+            const toggle = document.createElement('button');
             toggle.className = 'mobile-toggle';
-            toggle.innerHTML = '☰';
-            toggle.style.cursor = 'pointer';
-            toggle.style.fontSize = '1.5rem';
-            toggle.style.color = '#2c3e50';
+            toggle.setAttribute('aria-label', 'Toggle navigation menu');
+            toggle.innerHTML = '<span>☰</span>';
             
-            toggle.addEventListener('click', () => {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
                 nav.classList.toggle('mobile-active');
+                toggle.classList.toggle('active');
+            });
+            
+            // Close menu when clicking a link
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('mobile-active');
+                    toggle.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navContainer.contains(e.target)) {
+                    nav.classList.remove('mobile-active');
+                    toggle.classList.remove('active');
+                }
             });
             
             navContainer.appendChild(toggle);
         }
+    } else {
+        // Remove mobile toggle on desktop
+        const toggle = document.querySelector('.mobile-toggle');
+        if (toggle) toggle.remove();
+        nav.classList.remove('mobile-active');
     }
 };
 
-window.addEventListener('resize', createMobileNav);
-window.addEventListener('load', createMobileNav);
+window.addEventListener('resize', setupMobileNav);
+window.addEventListener('load', setupMobileNav);
