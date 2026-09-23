@@ -1,0 +1,76 @@
+Tarun's Agentic AI Architecture Taxonomy
+
+I design enterprise AI systems as connected layers: choose the intelligence, ground it in trusted knowledge, orchestrate action, control runtime state, standardize interoperability, and measure the result.
+
+Layer 1 — Model & AI Platform
+Purpose: Select and operate the model foundation for each workload.
+Capabilities:
+- Model selection by quality, reasoning, latency, reliability, and cost
+- Multi-model routing and fallback
+- Embedding and reranking model selection
+- Multimodal model architecture and inference
+- Prompt and model version management
+Platforms: OpenAI, Azure OpenAI, AWS Bedrock, Microsoft Foundry
+
+Layer 2 — Knowledge & RAG
+Purpose: Make enterprise information retrievable, grounded, and permission-aware.
+Capabilities:
+- Document ingestion, OCR, preprocessing, metadata enrichment, and validation
+- Chunking and indexing strategy
+- Hybrid retrieval across vector and keyword search
+- Query rewriting, filtering, and reranking
+- Graph RAG, Agentic RAG, and Multimodal RAG
+- Permission-aware knowledge access
+
+Layer 3 — Agents & Orchestration
+Purpose: Move from generated answers to planned, supervised action.
+Capabilities:
+- Task planning and decomposition
+- Tool calling and dynamic tool selection
+- ReAct and Plan-and-Execute workflows
+- Supervisor and specialist multi-agent patterns
+- Human approval for consequential actions
+- Workflow + agent hybrids
+Frameworks: LangGraph, Strands, AWS Bedrock Agents
+
+Layer 4 — Context, Memory & Runtime
+Purpose: Control what the system knows, remembers, and is allowed to do during execution.
+Capabilities:
+- Context selection, ranking, compression, and isolation
+- Session, working, and long-term memory
+- Conversation and execution state
+- Checkpoints, persistence, and durable recovery
+- Retry, timeout, execution-limit, and budget policies
+
+Layer 5 — Tools & Interoperability
+Purpose: Connect agents to enterprise systems through governed interfaces.
+Capabilities:
+- MCP, A2A, and OpenAPI/REST integration
+- Structured schemas and contract validation
+- Tool discovery and capability routing
+- Authentication, authorization, and tenant-aware permissions
+- Secure, idempotent, observable tool execution
+
+Layer 6 — Evaluation, Security & Operations
+Purpose: Prove quality and run AI safely in production.
+Capabilities:
+- LLM, RAG, and agent evaluation with regression datasets
+- Groundedness, faithfulness, retrieval quality, task completion, and tool-call accuracy
+- Traces for quality, cost, latency, and failure analysis
+- Prompt-injection and PII controls, tenant isolation, RBAC, and audit trails
+- Reliability engineering and cost optimization
+
+Solution catalog
+- Enterprise Knowledge Assistant: grounded RAG over internal policies and product knowledge
+- Customer Support & Operations Copilot: retrieval, tool execution, workflow routing, and human approval
+- Resume Bot & Vehicle Search: semantic matching, structured extraction, and reranking
+- Agentic Workflow Automation: recoverable multi-step operations with governed tools
+- MCP-based Enterprise Tool Platform: reusable tool interfaces for AI applications
+
+Customer Support Copilot — interactive workflow
+1. Intake: classify intent and identify the requested outcome.
+2. Plan: decompose the request into retrieval and action steps.
+3. Ground: retrieve policy, troubleshooting, and customer context.
+4. Act: select and validate the required enterprise tools.
+5. Approve: pause for human review when the action is high impact.
+6. Recover: retry safely, use fallbacks, and preserve state for resume.
